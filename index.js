@@ -5,6 +5,8 @@
 var express = require("express");
 var app = express();
 
+// const stylePath = __dirname + "/public";
+
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
 var cors = require("cors");
@@ -16,6 +18,13 @@ app.use(express.static("public"));
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
+});
+
+// app.use("/public", express.static(stylePath));
+
+// http://expressjs.com/en/starter/basic-routing.html
+app.use("/", function (req, res) {
+  res.sendFile(__dirname + "/public/style.css");
 });
 
 // your first API endpoint...

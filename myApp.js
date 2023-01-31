@@ -3,6 +3,8 @@ form.addEventListener("submit", handleFormSubmit);
 
 function handleFormSubmit(e) {
   e.preventDefault();
+
+  console.log("Jimmy G waz here");
   const input = document.getElementById("date-input").value;
   if (!input) {
     fetch("/api")
