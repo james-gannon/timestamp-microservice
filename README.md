@@ -1,6 +1,10 @@
 # Timestamp Microservice
 
-A full stack JavaScript app that is functionally similar to this: https://timestamp-microservice.freecodecamp.rocks.
+A full stack JavaScript app that takes in a timestamp input, and outputs the same time in **utc** and **unix** fomats. It looks like this:
+
+![image](https://user-images.githubusercontent.com/50316657/215901624-edf695b6-f4b9-45ad-8e8b-c5b62ca23902.png)
+
+## Overview
 
 This API microservice:
 
@@ -21,3 +25,23 @@ This API microservice:
 
 - Returns the current time in a JSON object with a **unix** key if the `submit` button is clicked with an empty date parameter.
 - Returns the current time in a JSON object with a **utc** key if the `submit` button is clicked with an empty date parameter.
+
+## Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/james-gannon/timestamp-microservice.git
+   ```
+2. Navigate into the subdirectory:
+   ```sh
+   cd timestamp-microservice
+   ```
+3. Install NPM packages using `yarn` or `npm install`.
+
+## Usage
+
+1. Run `node index.js` to launch the web app on localhost. You should see your terminal output something similar to `Your app is listening on port 46591`
+
+2. Copy and paste this port into your browser like so: `http://localhost:<PORT NUMBER HERE>/`
+
+3. Use the input fields and submit button to convert any timestamp input to utc and unix formats.
